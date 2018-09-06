@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=HelloWorld
+comment0.text=\r\n\ Hello\ World\ Sample\ File\r\n\r\n\ @author\ Dylan\ Barva\r\n\ @version\ (1,\ 8/16/18)\r\n
+comment1.params=
+comment1.target=HelloWorld()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ HelloWorld\r\n
+comment2.params=
+comment2.target=void\ main()
+numComments=3
