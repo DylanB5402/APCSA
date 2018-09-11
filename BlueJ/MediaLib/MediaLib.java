@@ -9,6 +9,7 @@ public class MediaLib
     private static Movie movie1;
     private static Song song1, song2, song3, song4, 
     song5, song6, song7, song8;
+    public static Book2 book;
     
     /**
      * Constructor for objects of class MediaLib
@@ -18,7 +19,7 @@ public class MediaLib
     
     public static void main() {
 
-        book1 = new Book("Harry Potter and the Deathly Hallows",8, 1.50);       
+        /*book1 = new Book("Harry Potter and the Deathly Hallows",8, 1.50);       
         movie1 = new Movie("Star Wars: Revenge of the Sith", 9, 7.10, 129);
         book2 = new Book("Halo: The Fall of Reach", 8, 0); 
         
@@ -41,7 +42,7 @@ public class MediaLib
         System.out.println("Price:");
         System.out.println(book1.getPrice());
         *
-                /*
+                
         System.out.println(book2.getTitle());
         System.out.println("Rating:");
         System.out.println(book2.getRating());
@@ -69,6 +70,12 @@ public class MediaLib
         System.out.println("Average Rating");
         System.out.println(song1.getAveRating());
         */
+       
+       book = new Book2("title","name", 10);
+       book.giveDiscount(15);
+       System.out.println(book.getPrice());
+           
+      
        
     }   
 }
