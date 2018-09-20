@@ -19,9 +19,9 @@ public class MediaLib
     
     public static void main() {
 
-        /*book1 = new Book("Harry Potter and the Deathly Hallows",8, 1.50);       
+        //book1 = new Book("Harry Potter and the Deathly Hallows",8, 1.50);       
         movie1 = new Movie("Star Wars: Revenge of the Sith", 9, 7.10, 129);
-        book2 = new Book("Halo: The Fall of Reach", 8, 0); 
+        //book2 = new Book("Halo: The Fall of Reach", 8, 0); 
         
         System.out.println(movie1.getTitle());
         System.out.println("Rating:");
@@ -71,9 +71,9 @@ public class MediaLib
         System.out.println(song1.getAveRating());
         */
        
-       book = new Book2("title","name", 10);
-       book.giveDiscount(15);
-       System.out.println(book.getPrice());
+       //book = new Book2("title","name", 10);
+       //book.giveDiscount(15);
+       //System.out.println(book.getPrice());
            
       
        

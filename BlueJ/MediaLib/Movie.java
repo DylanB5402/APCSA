@@ -23,11 +23,9 @@ public class Movie {
         minutes = duration % 60;
         hours = (duration - minutes)/60;
     }
-
     public String getTitle() {
         return title;
     }
-    
     public void setTitle(String t) {
         title = t;
     }
