@@ -1,4 +1,4 @@
-
+package org.pltw.examples.weather;
 /**
  * Write a description of class WeatherConditionals here.
  *

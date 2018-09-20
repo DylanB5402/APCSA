@@ -3,4 +3,6 @@ comment0.target=WeatherConditionals
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ WeatherConditionals\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=temperature\ condition
 comment1.target=java.lang.String\ getWeatherAdvice(int,\ java.lang.String)
-numComments=2
+comment2.params=temperature\ windchill\ humidity\ condition
+comment2.target=java.lang.String\ getHikingAdvice(int,\ int,\ int,\ java.lang.String)
+numComments=3
