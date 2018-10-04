@@ -148,6 +148,39 @@ public class Magpie3
         return -1;
     }
 
+    public int findKeyword2(String statement, String goal, int startPos)
+    {
+     String phrase = statement.trim();
+     int i = 1;
+     int psn = phrase.toLowerCase().indexOf(goal.toLowerCase(), startPos);
+     while (psn >= 0)
+     {
+     String before = " ", after = " ";
+     if (psn > 0)
+     {
+     before = phrase.substring (psn - 1, psn).toLowerCase();
+     }
+     if (psn + goal.length() < phrase.length())
+     {
+     after = phrase.substring(psn + goal.length(),
+     psn + goal.length() + 1).toLowerCase();
+     }
+     /* determine the values of psn, before, and after at this point in the method. */
+     System.out.println(i);
+     System.out.println(before);
+     System.out.println(after);
+     System.out.println(psn);
+     if (((before.compareTo ("a") < 0 ) || (before.compareTo("z") > 0))
+     &&
+     ((after.compareTo ("a") < 0 ) || (after.compareTo("z") > 0)))
+     {
+     return psn;
+     }
+     psn = phrase.indexOf(goal.toLowerCase(), psn + 1);
+     i++;
+     }
+     return -1;
+    } 
     /**
      * Search for one word in phrase. The search is not case
      * sensitive. This method will check that the given goal
