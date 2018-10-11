@@ -57,6 +57,7 @@ public class Magpie3
         }
         else if (findKeyword(statement, "James") >= 0)
         {
+            //Barva, Dylan
             response = "She's a comp sci teacher";
         }
         else if (findKeyword(statement, "no") >= 0)
@@ -74,6 +75,16 @@ public class Magpie3
         else if (findKeyword(statement, "food") >= 0)
         {
             response = "I don't even eat";
+        }
+        else if (findKeyword(statement, "I want") >= 0)
+        {
+            String thing = statement.substring(7, statement.length());
+            response = "Would you really be happy if you had " + thing;
+        }
+        else if ((findKeyword(statement, "I") >= 0) && (findKeyword(statement, "you") >= 0)) {
+            String thing = statement.substring(statement.indexOf("I") + 1, statement.indexOf("you") -1);
+            response = "Why do you " + thing + " me?";
+           
         }
         else
         {
