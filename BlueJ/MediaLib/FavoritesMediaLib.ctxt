@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=FavoritesMediaLib
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ FavoritesMediaLib\ here.\r\n\r\n
+comment1.params=
+comment1.target=void\ main()
+comment2.params=
+comment2.target=void\ printAllSongs()
+comment3.params=
+comment3.target=void\ printFavorites()
+comment4.params=song
+comment4.target=java.lang.String\ formatSongData(Song)
+numComments=5

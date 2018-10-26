@@ -19,7 +19,7 @@ public class MediaLib
     
     public static void main() {
 
-        //book1 = new Book("Harry Potter and the Deathly Hallows",8, 1.50);       
+        /*//book1 = new Book("Harry Potter and the Deathly Hallows",8, 1.50);       
         movie1 = new Movie("Star Wars: Revenge of the Sith", 9, 7.10, 129);
         //book2 = new Book("Halo: The Fall of Reach", 8, 0); 
         
@@ -50,7 +50,7 @@ public class MediaLib
         System.out.println(book2.getPrice());
         */
        
-        /*Song.resetCounters();
+        Song.resetCounters();
         song1 = new Song("Song1", 0, 1.29);
         song2 = new Song("Song2", 8, 1.29);
         song3 = new Song("Song3", 6, 0.99);
@@ -61,7 +61,7 @@ public class MediaLib
         song8 = new Song("Song8", 5, 1.29); 
         
         
-        System.out.println("Number of Songs");
+        /*System.out.println("Number of Songs");
         System.out.println(song1.getSongCount());
         System.out.println("Total Cost");
         System.out.println(song1.getTotalCost());
@@ -75,7 +75,17 @@ public class MediaLib
        //book.giveDiscount(15);
        //System.out.println(book.getPrice());
            
-      
+       /*MediaFile.writeString(song1.getTitle() + "|" + String.valueOf(song1.getRating()));
+       MediaFile.writeString(song2.getTitle() + "|" + String.valueOf(song2.getRating()));
+       MediaFile.writeString(song3.getTitle() + "|" + String.valueOf(song3.getRating()));
+       MediaFile.writeString(song4.getTitle() + "|" + String.valueOf(song4.getRating()));
+       MediaFile.writeString(song5.getTitle() + "|" + String.valueOf(song5.getRating()));
+       MediaFile.writeString(song6.getTitle() + "|" + String.valueOf(song6.getRating()));
+       MediaFile.writeString(song7.getTitle() + "|" + String.valueOf(song7.getRating()));
+       MediaFile.writeString(song8.getTitle() + "|" + String.valueOf(song8.getRating()));*/
+       while (MediaFile.readString() != null) {
+           System.out.println(MediaFile.readString());
+        }
        
     }   
 }
