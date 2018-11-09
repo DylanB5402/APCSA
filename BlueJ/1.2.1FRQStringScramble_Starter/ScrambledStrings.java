@@ -18,30 +18,42 @@ public class ScrambledStrings
      *        a letter that was not "A" were swapped
      *   - letters were swapped at most once
      */
-    public static void scrambleWord(String word)
+    public static String scrambleWord(String word)
     {
-        String letter1, letter2;
-       for (int i = 0; i < word.length()-1; i++) {
-           letter1 = word.substring(i, i+1);
+        String letter1, letter2, start, end;
+        String lastLetter1 = "";
+        
+        int i = 0;
+       while (i < word.length() - 1) {
+           letter1 = word.substring(i, i+1);   
            letter2 = word.substring(i+1, i+2);
-           System.out.println(letter1);
-           System.out.println(letter2);
+           end = word.substring(i+2, word.length());
+           start = word.substring(0, i);
+           lastLetter1 = letter1;
+           if (letter1.equals("A")){
+             word = start + letter2 + letter1 + end;
+             i += 2;
+            } else {
+               word = start + letter1 + letter2 + end;
+               i++;
+            }
         }
+        return word;
           
     }
 
     /********************** Test *********************/
     public static void main(String[] args)
     {
-        /*System.out.println("\nTesting Part (a):\n");
+        System.out.println("\nTesting Part (a):\n");
 
         String[] words = {"TAN", "ABRACADABRA", "WHOA",
-                "AARDVARK", "EGGS", "A", ""};
+                "AARDVARK", "EGGS", "AB", "TACO"};
         for (String word : words){
             System.out.println(word + " becomes " + scrambleWord(word));
-        }*/
+        }
         
-        scrambleWord("taco");
+        //scrambleWord("taco");
         
         
 }
