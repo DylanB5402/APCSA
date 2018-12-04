@@ -30,6 +30,7 @@ public class ArrayMediaLab
                          new Song("Song7", 7, 0.99),
                          new Song("Song8", 5, 1.29)
                          };
+        //Barva, Dylan
         Song song;
         for (int i = 0; i < songList.length; i++) {
             song = songList[i];
@@ -43,7 +44,7 @@ public class ArrayMediaLab
             System.out.println(song.getPrice());
         }
         
-        for (int i = 0; i < songList.length; i++) {
+        /*for (int i = 0; i < songList.length; i++) {
             song = songList[i];
             //song.setTitle("test");
             if (i % 2 == 0) {
@@ -57,7 +58,7 @@ public class ArrayMediaLab
                 System.out.println(s.getTitle());
             }
             i++;
-        }
+        }*/
     
 }
 }
