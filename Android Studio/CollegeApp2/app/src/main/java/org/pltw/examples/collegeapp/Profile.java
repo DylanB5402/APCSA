@@ -4,9 +4,9 @@ public class Profile {
 
     private String firstName, lastName;
 
-    public Profile(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public Profile() {
+        this.firstName = "";
+        this.lastName = "";
     }
 
     public String getFirstName() {
