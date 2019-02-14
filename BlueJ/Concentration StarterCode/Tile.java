@@ -98,6 +98,13 @@ public class Tile
             return false;
         }
     }
+    
+    public boolean addCardFaces(Tile tile) {
+        int a = Integer.parseInt(this.cardFace);
+        int b = Integer.parseInt(tile.cardFace);
+        if ( a + b == 7) return true;
+        else return false;
+    }
 
 }
 

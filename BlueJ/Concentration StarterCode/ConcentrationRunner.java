@@ -9,13 +9,14 @@ import java.util.Scanner;
 public class ConcentrationRunner
 {
     // create the game 
-    private static Concentration game = new Concentration();
+    private static Concentration game;
 
     public static void main()
     {
         // input object for the BlueJ console
         Scanner in = new Scanner(System.in);
-
+        boolean concentration = false;
+        game = new Concentration(concentration);
         // instructions
         System.out.println("Welcome to the game of Concentration.");
 
@@ -28,7 +29,6 @@ public class ConcentrationRunner
         while(!game.allTilesMatch()) {
 
             displayBoard();
-
             // player selects first tile, if not an integer, quit game
             int i1 = -1;
             int j1 = -1;
@@ -58,7 +58,7 @@ public class ConcentrationRunner
             displayBoard(); 
            
             // determine if a match was found
-            String matched = game.checkForMatch(i1, j1, i2, j2);
+            String matched = game.checkForMatch(i1, j1, i2, j2, concentration);
             System.out.println(matched);
           
             // wait 2 seconds to start the next turn
@@ -77,6 +77,7 @@ public class ConcentrationRunner
 
         System.out.print('\u000C'); 
         System.out.println(game);
+        game.display();
     }
 
     /**

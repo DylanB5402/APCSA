@@ -9,8 +9,10 @@
 public abstract class Board
 {
     //The cards that will be placed in the tiles
-    private String[] cards = new String[] {"dog", "dog", "cat", "cat", "mouse", "mouse",
-        "wolf", "wolf", "monkey", "monkey", "bird", "bird"}; 
+    protected String[] concentration = new String[] {"dog", "dog", "cat", "cat", "mouse", "mouse",
+       "wolf", "wolf", "monkey", "monkey", "bird", "bird"}; 
+    protected String[] sevens = new String[] { "1", "1", "2" ,"2",
+    "3", "3", "4", "4", "5", "5" ," 6", "6"};
 
     // The  shape of the board
     private int rows = 3;
@@ -31,8 +33,8 @@ public abstract class Board
      * @return a String array of card values
      * 
      */
-    public String[] getCards () {   
-        return cards;
-    }
+    // public String[] getCards () {   
+        // return cards;
+    // }
 
 }

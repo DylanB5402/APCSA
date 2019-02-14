@@ -13,13 +13,18 @@ public class Concentration extends Board
 {
     // create the game board
     private Tile[][] gameboard = makeBoard();
-    private String[] cardList = getCards();
+    private String[] cardList;
     
     /** 
      * The constructor for the game. Creates the 2-dim gameboard
      * by populating it with tiles.
      */
-    public Concentration() { 
+    public Concentration(boolean isConcentration) { 
+        if (isConcentration) {
+            cardList = concentration;
+        } else {
+            cardList = sevens;
+        }
         generateBoard();
     }
     
@@ -90,19 +95,36 @@ public class Concentration extends Board
      * @param column2 the column vlue of Tile 2
      * @return a message indicating whether or not a match occured
      */
-    public String checkForMatch(int row1, int column1, int row2, int column2) {
+    public String checkForMatch(int row1, int column1, int row2, int column2,boolean isConcentration) {
         
-        if (gameboard[row1][column1].equals(gameboard[row2][column2])) {
-            
-            gameboard[row1][column1].foundMatch();
-            gameboard[row2][column2].foundMatch();
-            return "It's a match";
+        String match = "It's a match.";
+        String noMatch = "Not a match";
+        if (isConcentration) {
+            if (gameboard[row1][column1].equals(gameboard[row2][column2])) {
+                
+                gameboard[row1][column1].foundMatch();
+                gameboard[row2][column2].foundMatch();
+                return match;
+            } else {
+                gameboard[row1][column1].faceUp(false);
+                gameboard[row2][column2].faceUp(false);
+                return noMatch;
+            }
         } else {
-            gameboard[row1][column1].faceUp(false);
-            gameboard[row2][column2].faceUp(false);
-            return "Not a match";
+            if (gameboard[row1][column1].addCardFaces(gameboard[row2][column2])) {
+                gameboard[row1][column1].foundMatch();
+                gameboard[row2][column2].foundMatch();
+                return match;
+            } else {
+                gameboard[row1][column1].faceUp(false);
+                gameboard[row2][column2].faceUp(false);
+                return noMatch;
+            }
+            
         }
+        
     }
+    
 
     /**
      * Set  tile to show its card in the face up state

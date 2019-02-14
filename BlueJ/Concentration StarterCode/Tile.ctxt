@@ -24,4 +24,6 @@ comment7.target=boolean\ matched()
 comment7.text=\r\n\ Determine\ if\ this\ tile\ has\ been\ matched\r\n\ \r\n\ @return\ true\ of\ the\ card\ was\ previously\ matched,\ false\ otherwise\r\n
 comment8.params=other
 comment8.target=boolean\ equals(Tile)
-numComments=9
+comment9.params=tile
+comment9.target=boolean\ addCardFaces(Tile)
+numComments=10
